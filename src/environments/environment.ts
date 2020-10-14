@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  googleAnalyticsId: "none"
+  googleAnalyticsId: "none",
+  baseUrl: "https://www.staging-graille.clementbarbaza.website"
 };
 
 /*

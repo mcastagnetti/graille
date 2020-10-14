@@ -15,6 +15,12 @@ import { PhotoItemComponent } from './actualite/photo-item/photo-item.component'
 import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
 import { environment } from 'src/environments/environment';
 
+import { Platform } from '@angular/cdk/platform';
+import { ShareModule } from '@ngx-share/core';
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,8 +39,13 @@ import { environment } from 'src/environments/environment';
     NgxGoogleAnalyticsModule.forRoot(environment.googleAnalyticsId),
     NgxGoogleAnalyticsRouterModule,
     AppRoutingModule,
+    ShareModule,
+    HttpClientModule,
+
   ],
-  providers: [],
+  providers: [
+    Platform
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

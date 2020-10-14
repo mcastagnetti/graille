@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-vimeo-item',
@@ -6,6 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./vimeo-item.component.scss']
 })
 export class VimeoItemComponent implements OnInit {
+
+  private static ACTUALITE_BASE_URL = "/actualie";
 
   @Input()
   public direction: string; // should be left ort right
@@ -28,6 +31,19 @@ export class VimeoItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public getUrl(): string {
+    return environment.baseUrl + VimeoItemComponent.ACTUALITE_BASE_URL;
+    //  + "#" + this.slug;
+  }
+
+  public sharedOpen() {
+    console.log("shared open!")
+  }
+
+  public shareClosed() {
+    console.log("shared open!")
   }
 
 }

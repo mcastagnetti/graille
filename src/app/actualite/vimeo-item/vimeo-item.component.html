@@ -20,6 +20,18 @@
             <div class="text-gray-600">
                 <app-vimeo [vimeoId]="viemoId"></app-vimeo>
             </div>
+            <div class="flex flew-row py-2">
+                <!--Set color and icon-->
+                <div shareButton="facebook" [url]="getUrl()" [title]="title" [description]="text"
+                    (opened)="sharedOpen()" (closed)="shareClosed()" class="w-10 h-10 mx-2 rounded-full leading-10 text-blue-500 border
+                    border-4 border-primary hover:bg-gray-200 text-center">
+                    <i class="fab fa-facebook-f text-lg"></i>
+                </div>
+                <div shareButton="pinterest"
+                    class="mx-2 w-10 h-10 rounded-full leading-10 text-red-500 border border-4 border-primary hover:bg-gray-200 text-center">
+                    <i class="fab fa-pinterest  text-lg"></i>
+                </div>
+            </div>
         </div>
     </div>
     <!--line column-->
